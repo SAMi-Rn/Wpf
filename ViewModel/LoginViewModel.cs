@@ -99,7 +99,7 @@ namespace Login.ViewModel
                }
                else
                {
-                    ErrorMessage = "* Invalid username or password";
+                    ErrorMessage = "Invalid username or password";
                }
           }
           private void ExecuteRecoverPassCommand(string username, string email)
