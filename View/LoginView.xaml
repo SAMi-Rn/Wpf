@@ -5,13 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login.View"
         mc:Ignorable="d"
-        Title="LoginView" Height="450" Width="800"
+        Title="LoginView" Height="543" Width="800"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
+         Background="Transparent"
+        AllowsTransparency="True"
         MouseDown="Window_MouseDown">
-     
-    <Grid>
-        
-    </Grid>
+
+     <Border CornerRadius="12">
+          <Border.Background>
+               <ImageBrush ImageSource="/img/background_img.png"
+                        Stretch="None"/>
+          </Border.Background>
+          <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+               <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                         <GradientStop Color="#000033" Offset="0"/>
+                         <!-- Deep space blue -->
+                         <GradientStop Color="#000066" Offset="0.5"/>
+                         <!-- Mid space blue -->
+                         <GradientStop Color="#0D003A" Offset="1"/>
+                         <!-- Deep space purple -->
+                    </LinearGradientBrush>
+               </Border.BorderBrush>
+               <Border.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                         <GradientStop Color="#000033" Offset="0"/>
+                         <!-- Deep space blue -->
+                         <GradientStop Color="#000044" Offset="0.5"/>
+                         <!-- Mid transition color -->
+                    </LinearGradientBrush>
+               </Border.Background>
+          </Border>
+     </Border>
 </Window>
