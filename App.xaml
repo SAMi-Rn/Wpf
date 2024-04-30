@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:WPF"
              Startup="ApplicationStart">
     <Application.Resources>
-         
-    </Application.Resources>
+          <ResourceDictionary>
+               <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="/Styles/Colours.xaml"/>
+                    <ResourceDictionary Source="/Styles/ButtonStyles.xaml"/>
+               </ResourceDictionary.MergedDictionaries>
+          </ResourceDictionary>
+
+     </Application.Resources>
 </Application>
+ 

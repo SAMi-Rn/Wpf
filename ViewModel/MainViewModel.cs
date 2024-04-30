@@ -39,12 +39,19 @@ namespace Login.ViewModel
 
           private void LoadCurrentUserData()
           {
-               var user = userRepository.GetByUsername(Thread.CurrentPrincipal.Identity.Name);
+               var username = Thread.CurrentPrincipal.Identity.Name;
+               if (string.IsNullOrEmpty(username))
+               {
+                    CurrentUserAccount.DisplayName = "No user logged in";
+                    return;
+               }
+
+               var user = userRepository.GetByUsername(username);
                if (user != null)
                {
                     CurrentUserAccount.Username = user.Username;
-                    CurrentUserAccount.DisplayName = $"Welcome {user.Name} {user.LastName} ;)";
-                    CurrentUserAccount.ProfilePicture = null;
+                    CurrentUserAccount.DisplayName = $"Welcome {user.Name} {user.LastName};";
+                    CurrentUserAccount.ProfilePicture = null; // Assuming you might later set this
                }
                else
                {
