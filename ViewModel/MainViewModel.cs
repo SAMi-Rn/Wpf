@@ -89,7 +89,7 @@ namespace Login.ViewModel
                if (user != null)
                {
                     CurrentUserAccount.Username = user.Username;
-                    CurrentUserAccount.DisplayName = $"Welcome {user.Name} {user.LastName};";
+                    CurrentUserAccount.DisplayName = $"Welcome {user.Name} {user.LastName}";
                     CurrentUserAccount.ProfilePicture = null;
                }
                else
