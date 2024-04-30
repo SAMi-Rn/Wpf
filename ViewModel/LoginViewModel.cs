@@ -13,13 +13,11 @@ namespace Login.ViewModel
 {
      public class LoginViewModel : ViewModel
      {
-          //Fields
           private string _username;
           private SecureString _password;
           private string _errorMessage;
           private bool _isViewVisible = true;
           private IUserRepository userRepository;
-          //Properties
           public string Username
           {
                get
